@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
   # If you would like to change where this extension is mounted, simply change the
@@ -12,8 +14,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
+  root 'welcome#index'
+  #get '/', to: redirect('/homepage')
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,5 @@
+-#=render '/refinery/content_page'
+%section#body
+  =raw @page.content_for(:body)
+%section#side_body
+  =raw @page.content_for(:side_body)

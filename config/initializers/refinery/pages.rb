@@ -1,15 +1,15 @@
 # encoding: utf-8
 Refinery::Pages.configure do |config|
   # Configure specific page templates
-  # config.types.register :home do |home|
-  #   home.parts = %w[intro body]
-  # end
+  config.types.register :home do |home|
+    home.parts = %w[intro body]
+  end
 
   # Configure global page default parts
-  # config.default_parts = ["Body", "Side Body"]
+  config.default_parts = ["body", "side_body"]
 
   # Configure whether to allow adding new page parts
-  # config.new_page_parts = false
+  config.new_page_parts = true
 
   # Configure whether to enable marketable_urls
   # config.marketable_urls = true
@@ -65,5 +65,5 @@ Refinery::Pages.configure do |config|
 
   # config.absolute_page_links = false
 
-  # config.show_title_in_body = true
+  config.show_title_in_body = false
 end

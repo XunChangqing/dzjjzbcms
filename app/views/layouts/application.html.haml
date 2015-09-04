@@ -1,0 +1,24 @@
+!!!
+%html
+  %body
+    = render "/refinery/html_tag"
+    - site_bar = render('/refinery/site_bar', :head => true)
+    = render "/refinery/head"
+    = site_bar
+    #page_container
+      -#%header#header
+        -#= render "/refinery/header"
+      -#%section#page
+      -#.container
+        -#= yield
+      -#%footer
+        -#= render "/refinery/footer"
+
+      = render "layouts/header"
+
+      .container
+        = yield
+
+      = render "layouts/footer"
+    = render "/refinery/javascripts"
+
